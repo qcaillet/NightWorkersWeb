@@ -21,10 +21,10 @@
    font-family: "silkscreen" !important; 
 }
 
-a {
+a.link {
   background-image: linear-gradient(
     to right,
-    #54b3d6,
+    #7134bc,
     #54b3d6 50%,
     #fff 50%
   );
@@ -42,7 +42,7 @@ a {
   color: antiquewhite !important;
 }
 
-a:before{
+/* a.link:before{
   content: '';
   background: #54b3d6;
   display: block;
@@ -52,13 +52,14 @@ a:before{
   width: 0;
   height: 3px;
   transition: all 0.3s ease-in-out;
-}
+  border-radius: 5px;
+} */
 
-a:hover {
+a.link:hover {
  background-position: 0;
 }
 
-a:hover::before{
+a.link:hover::before{
   width: 100%;
 }
 /* --------- */

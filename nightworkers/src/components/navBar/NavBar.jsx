@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Typography, Toolbar, Box, AppBar, Link } from "@mui/material";
 import "./NavBar.css";
 import "@fontsource/silkscreen";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [navColour, updateNavbar] = useState(false);
-  const logo = require("../../assets/image.png");
+  const logo = require("../../assets/logo.png");
 
   const scrollHandler = () => {
     if (window.scrollY >= 20) {
@@ -42,12 +43,28 @@ const NavBar = () => {
             sx={{ flexGrow: 1 }}
           ></Typography>
 
-          <Box className="link" defaultActiveKey="#home">
-            <Link underline="hover">The Lab</Link>
-            <Link underline="hover">Casino</Link>
-            <Link underline="hover">P2E</Link>
-            <Link underline="hover">delegate validation</Link>
-            <Link underline="hover">DAPP</Link>
+          <Box className="link">
+            <NavLink to="/" className="link" underline="hover">
+              The Lab
+            </NavLink>
+            <NavLink to="/validation" className="link" underline="hover">
+              delegate validation
+            </NavLink>
+            <NavLink to="casino" className="link" underline="hover">
+              Casino
+            </NavLink>
+            <NavLink to="RiskToEarn" className="link" underline="hover">
+              R2E
+            </NavLink>
+            <Link
+              className="link"
+              underline="hover"
+              target="_blank"
+              rel="noopener"
+              href="https://nightworkers.vercel.app/"
+            >
+              DAPP
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
